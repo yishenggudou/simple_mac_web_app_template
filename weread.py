@@ -13,5 +13,5 @@ This example demonstrates how to create a webview window.
 icon_path = os.path.join(DIR, 'icon.jpg')
 if __name__ == '__main__':
     # Create a standard webview window
-    window = webview.create_window('微信读书', 'https://weread.qq.com/web/shelf', icon=icon_path)
+    window = webview.create_window('微信读书', 'https://weread.qq.com/web/shelf')
     webview.start()
