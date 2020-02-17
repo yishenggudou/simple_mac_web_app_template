@@ -5,4 +5,4 @@ bilibili:
   url: https://www.bilibili.com/
   width: 1024
   height: 800
-  debug: True
+  debug: true

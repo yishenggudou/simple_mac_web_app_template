@@ -5,6 +5,39 @@
 
 import webview
 import os
+fix_js = r"""
+setTimeout(
+    function(){
+         function fix(){
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('src', '//apps-1251771654.cos.ap-chengdu.myqcloud.com/weread/app.js');
+            script.onload = function() {
+              console.log("Script loaded and ready");
+            };
+            document.body.appendChild(script)
+        }
+        window.onload =fix;
+        fix();
+        console.log("exec finished!")
+    }
+,2000);
+console.log("load finished!")
+"""
+
+def evaluate_js(window):
+    result = window.evaluate_js(fix_js )
+    print(result)
+
+def on_loaded():
+    print('DOM is ready')
+    window = webview.windows[0]
+    print("in onload event....",window,window.loaded)
+    window.loaded -= on_loaded
+    print("....",window.loaded)
+    rst = window.evaluate_js(fix_js)
+    print("rst",rst)
+    print("finished to evaluate_js!..")
 
 DIR = os.path.abspath(os.path.dirname(__file__))
 """
@@ -17,4 +50,6 @@ if __name__ == '__main__':
     {% if width %} width=%%width%%,{%endif  %}
     {% if height %} height=%%height%%,{%endif  %}
     )
+    window.loaded += on_loaded
+    #webview.start(evaluate_js,window,{% if debug %}debug=True,{% endif %})
     webview.start({% if debug %}debug=True,{% endif %})
