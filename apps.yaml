@@ -1,0 +1,8 @@
+bilibili:
+  icon: icons/b.icns
+  appname: "B站"
+  filename:
+  url: https://www.bilibili.com/
+  width: 1024
+  height: 800
+  debug: True

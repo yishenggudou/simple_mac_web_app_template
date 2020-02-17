@@ -1,0 +1,1 @@
+$(document).find('[target=_blank]').attr('target', 'none')
