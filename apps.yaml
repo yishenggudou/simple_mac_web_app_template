@@ -6,3 +6,11 @@ bilibili:
   width: 1024
   height: 800
   debug: true
+yinxiang:
+  icon: icons/yinxiang.icns
+  appname: "印象笔记"
+  filename:
+  url: https://app.yinxiang.com/Home.action
+  width: 600
+  height: 800
+  debug: true
