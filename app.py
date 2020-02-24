@@ -43,13 +43,13 @@ DIR = os.path.abspath(os.path.dirname(__file__))
 """
 This example demonstrates how to create a webview window.
 """
-icon_path = os.path.join(DIR, 'icons/yinxiang.icns')
+icon_path = os.path.join(DIR, 'icons/wechat.icns')
 if __name__ == '__main__':
     # Create a standard webview window
-    window = webview.create_window('印象笔记', 'https://app.yinxiang.com/Home.action',
-     width=600,
+    window = webview.create_window('wechat', 'https://wx.qq.com/',
+     width=400,
      height=800,
     )
     window.loaded += on_loaded
-    #webview.start(evaluate_js,window,debug=True,)
-    webview.start(debug=True,)
+    #webview.start(evaluate_js,window,)
+    webview.start()

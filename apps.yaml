@@ -14,3 +14,10 @@ yinxiang:
   width: 600
   height: 800
   debug: true
+wechat:
+  url: https://wx.qq.com/
+  icon: icons/wechat.icns
+  appname: "wechat"
+  filename:
+  width: 400
+  height: 800
