@@ -19,5 +19,5 @@ wechat:
   icon: icons/wechat.icns
   appname: "wechat"
   filename:
-  width: 400
+  width: 600
   height: 800

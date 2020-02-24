@@ -47,7 +47,7 @@ icon_path = os.path.join(DIR, 'icons/wechat.icns')
 if __name__ == '__main__':
     # Create a standard webview window
     window = webview.create_window('wechat', 'https://wx.qq.com/',
-     width=400,
+     width=600,
      height=800,
     )
     window.loaded += on_loaded
