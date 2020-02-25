@@ -21,3 +21,10 @@ meitu:
   url: https://xiuxiu.web.meitu.com/main.html
   width: 600
   height: 800
+wechat:
+  url: https://wx.qq.com/
+  icon: icons/wechat.icns
+  appname: "wechat"
+  filename:
+  width: 600
+  height: 800
