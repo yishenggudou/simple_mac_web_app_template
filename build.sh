@@ -6,3 +6,4 @@ cmd="dmgbuild -s settings.py app dist/$1-install.dmg"
 echo ${cmd}
 $cmd
 open dist/
+echo "./dist/app.app/Contents/MacOS/app"

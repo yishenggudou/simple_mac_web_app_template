@@ -14,3 +14,10 @@ yinxiang:
   width: 600
   height: 800
   debug: true
+meitu:
+  icon: icons/meitu.icns
+  appname: "美图秀秀"
+  filename:
+  url: https://xiuxiu.web.meitu.com/main.html
+  width: 600
+  height: 800
