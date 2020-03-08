@@ -2,8 +2,8 @@ bilibili:
   icon: icons/b.icns
   appname: "B站"
   filename:
-  url: https://www.bilibili.com/
-  width: 1024
+  url: https://m.bilibili.com/index.html
+  width: 600
   height: 800
   debug: true
 yinxiang:

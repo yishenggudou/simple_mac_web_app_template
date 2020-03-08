@@ -20,7 +20,7 @@ import os.path
 
 # .. Useful stuff ..............................................................
 
-application = defines.get('app', 'dist/app.app')
+application = defines.get('bilibili', 'dist/bilibili.app')
 appname = os.path.basename(application)
 
 def icon_from_app(app_path):
