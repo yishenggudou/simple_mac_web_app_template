@@ -24,6 +24,9 @@ setTimeout(
 ,2000);
 console.log("load finished!")
 """
+ua_js=r"""
+Object.defineProperty(window.navigator, 'userAgent', {get: function () {return "Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1"}});
+"""
 
 def evaluate_js(window):
     result = window.evaluate_js(fix_js )
@@ -35,8 +38,13 @@ def on_loaded():
     print("in onload event....",window,window.loaded)
     window.loaded -= on_loaded
     print("....",window.loaded)
-    rst = window.evaluate_js(fix_js)
-    print("rst",rst)
+    {% if is_mobile %}
+    try:
+        rst = window.evaluate_js(ua_js)
+        print(rst,ua_js)
+    except Exception as e:
+        print(e)
+    {% endif %}
     print("finished to evaluate_js!..")
 
 DIR = os.path.abspath(os.path.dirname(__file__))
@@ -45,13 +53,7 @@ This example demonstrates how to create a webview window.
 """
 icon_path = os.path.join(DIR, '%%icon%%')
 
-{% if gui == 'cef' %}
 
-from webview.platforms.cef import settings
-settings.update({
-    'persist_session_cookies': True
-})
-{% endif %}
 
 
 if __name__ == '__main__':

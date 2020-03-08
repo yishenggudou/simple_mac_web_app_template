@@ -24,6 +24,9 @@ setTimeout(
 ,2000);
 console.log("load finished!")
 """
+ua_js=r"""
+Object.defineProperty(window.navigator, 'userAgent', {get: function () {return "Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1"}});
+"""
 
 def evaluate_js(window):
     result = window.evaluate_js(fix_js )
@@ -35,8 +38,7 @@ def on_loaded():
     print("in onload event....",window,window.loaded)
     window.loaded -= on_loaded
     print("....",window.loaded)
-    rst = window.evaluate_js(fix_js)
-    print("rst",rst)
+    
     print("finished to evaluate_js!..")
 
 DIR = os.path.abspath(os.path.dirname(__file__))
@@ -50,9 +52,9 @@ icon_path = os.path.join(DIR, 'icons/b.icns')
 
 if __name__ == '__main__':
     # Create a standard webview window
-    window = webview.create_window('B站@yishenggudou@gmail.com', 'https://m.bilibili.com/index.html',
-     width=600,
-     height=800,
+    window = webview.create_window('B站@dafengstudio@gmail.com', 'https://m.bilibili.com/channel/13.html',
+     width=786,
+     height=1024,
     )
     window.loaded += on_loaded
     #webview.start(evaluate_js,window,debug=True,)
