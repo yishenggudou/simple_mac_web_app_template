@@ -9,4 +9,7 @@ clean: ## clean target files
 	rm -vrf dist
 	rm -vrf build
 
-build:
+gen_dep:
+	pip freeze > requirements.txt
+
+dep: gen_dep

@@ -45,17 +45,17 @@ DIR = os.path.abspath(os.path.dirname(__file__))
 """
 This example demonstrates how to create a webview window.
 """
-icon_path = os.path.join(DIR, 'icons/b.icns')
+icon_path = os.path.join(DIR, 'icons/yuque.icns')
 
 
 
 
 if __name__ == '__main__':
     # Create a standard webview window
-    window = webview.create_window('B站@dafengstudio@gmail.com', 'https://m.bilibili.com/channel/13.html',
-     width=786,
-     height=1024,
+    window = webview.create_window('yuque@dafengstudio@gmail.com', 'https://www.yuque.com',
+     width=600,
+     height=800,
     )
     window.loaded += on_loaded
-    #webview.start(evaluate_js,window,debug=True,)
-    webview.start(debug=True, )
+    #webview.start(evaluate_js,window,)
+    webview.start( )

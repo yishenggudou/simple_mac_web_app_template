@@ -16,7 +16,7 @@ from setuptools import setup
 
 DIR = os.path.abspath(os.path.dirname(__file__))
 
-icon_path = os.path.join(DIR, 'icons/b.icns')
+icon_path = os.path.join(DIR, 'icons/yuque.icns')
 
 
 def tree(src):
