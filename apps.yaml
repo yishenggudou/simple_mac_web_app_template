@@ -37,3 +37,10 @@ yuque:
   filename:
   width: 600
   height: 800
+douban_read:
+  url: https://read.douban.com/
+  icon: icons/douban_read.icns
+  appname: "豆瓣读书"
+  filename:
+  width: 600
+  height: 800

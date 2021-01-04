@@ -20,7 +20,7 @@ import os.path
 
 # .. Useful stuff ..............................................................
 
-application = defines.get('yuque', 'dist/yuque.app')
+application = defines.get('douban_read', 'dist/douban_read.app')
 appname = os.path.basename(application)
 
 def icon_from_app(app_path):
