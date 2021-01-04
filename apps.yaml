@@ -30,3 +30,10 @@ wechat:
   filename:
   width: 600
   height: 800
+yuque:
+  url: https://www.yuque.com
+  icon: icons/yuque.icns
+  appname: "yuque"
+  filename:
+  width: 600
+  height: 800
